@@ -7,11 +7,11 @@
 
 
 logging::EngineLogger::EngineLogger(LoggerType type) {
-        this->m_type = type;
+        this->type = type;
 }
 
 void logging::EngineLogger::log(logging::LogLevel level, std::string message) {
-    std::string out_message("[" + logging::loggerTypeToString(this->m_type) + "]" + " [" + logging::logLevelToString(level) + "] " + message);
+    std::string out_message("[" + logging::loggerTypeToString(this->type) + "]" + " [" + logging::logLevelToString(level) + "] " + message);
     std::cout << out_message << + "\n";
 }
 

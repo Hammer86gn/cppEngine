@@ -32,7 +32,7 @@ namespace logging {
         void log(LogLevel level, std::string message);
 
     private:
-        LoggerType m_type;
+        LoggerType type;
 
     };
 
