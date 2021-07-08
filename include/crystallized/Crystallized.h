@@ -1,0 +1,12 @@
+//
+// Created by Hammer86gn on 7/8/2021.
+//
+
+#ifndef CRYSTALLIZEDENGINE_CRYSTALLIZED_H
+#define CRYSTALLIZEDENGINE_CRYSTALLIZED_H
+
+namespace crystallized {
+
+}
+
+#endif //CRYSTALLIZEDENGINE_CRYSTALLIZED_H

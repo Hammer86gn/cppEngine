@@ -1,0 +1,4 @@
+project(CrystallizedTest)
+
+add_executable(CrystallizedTest src/main.cpp)
+target_link_libraries(CrystallizedTest CrystallizedEngine)
