@@ -4,15 +4,32 @@
 
 #include <crystallized/logging/EngineLogger.h>
 #include <iostream>
-
+#include <time.h>
+#include <chrono>
+#include <fstream>
 
 logging::EngineLogger::EngineLogger(LoggerType type) {
         this->type = type;
 }
 
 void logging::EngineLogger::log(logging::LogLevel level, std::string message) {
-    std::string out_message("[" + logging::loggerTypeToString(this->type) + "]" + " [" + logging::logLevelToString(level) + "] " + message);
-    std::cout << out_message << + "\n";
+    auto currentTime = std::chrono::system_clock::now();
+    std::time_t logTime = std::chrono::system_clock::to_time_t(currentTime);
+
+    //std::string out_message("[Crystallized Engine - " << std::ctime(&logTime) + "[" + logging::loggerTypeToString(this->type) + "]" + " [" + logging::logLevelToString(level) + "] " + message);
+    std::string timeFormat(std::ctime(&logTime));
+    timeFormat.replace(timeFormat.find("\n"),2,"");
+
+    std::cout << "[Crystallized - "
+    <<  timeFormat
+    << "]"
+    << "["
+    << logging::loggerTypeToString(this->type)
+    << "]" << "["
+    << logging::logLevelToString(level)
+    << "] "
+    << message
+    << "\n";
 }
 
 

@@ -6,7 +6,7 @@
 #include <crystallized/logging/EngineLogger.h>
 
 int main(void) {
-    logging::EngineLogger(logging::LoggerType::RENDER).log(logging::LogLevel::INFO, "Joe");
+    logging::EngineLogger(logging::LoggerType::RENDER).log(logging::LogLevel::INFO, "JoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoeJoe");
 
     return 0;
 }
